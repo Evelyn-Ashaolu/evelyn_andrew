@@ -1,3 +1,5 @@
+import portrait from './assets/portrait.png.png'
+
 const projects = [
   {
     number: '01',
@@ -42,7 +44,10 @@ function App() {
           <p className="hero-intro">I build thoughtful campaigns that turn attention into action, and action into lasting growth.</p>
           <a className="button button-dark" href="#work">See selected work <span>↓</span></a>
         </div>
-        <div className="hero-art" role="img" aria-label="Colorful abstract campaign collage">
+        <div className="hero-art">
+          <div className="portrait-stage">
+            <img className="portrait-image" src={portrait} alt="Evelyn Andrew smiling in a black blazer" />
+          </div>
           <div className="art-sticker">Strategy<br />with feeling</div>
           <div className="art-note">01 — 05</div>
         </div>
