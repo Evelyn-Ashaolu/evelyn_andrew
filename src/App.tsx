@@ -33,9 +33,12 @@ const categories = [
   { number: '02', label: 'Creative work', title: 'Creative Work', description: 'Design, video & visual storytelling', cta: 'Explore creative work ↗', path: '/creative-work', preview: 'design', image: designImage, alt: 'Design samples created by Evelyn Andrew for brand and digital marketing communication' },
   { number: '03', label: 'The thinking', title: 'Campaigns & Strategy', description: 'Strategy, campaigns & digital growth', cta: 'Explore campaigns', path: '/campaigns', preview: 'campaigns', image: campaignsImage, alt: 'A white king chess piece breaking apart beside a purple pawn chess piece on a light background' },
 ]
+const campaignsContent = { title: 'Campaigns & Strategy', intro: 'A look at the thinking behind the work—from campaign concepts and content strategy to digital execution and performance-focused marketing.', description: 'Campaign strategy and digital marketing work by Evelyn Andrew.', label: 'Campaign case studies' }
+
 const pageContent: Record<string, { title: string; intro: string; description: string; label: string }> = {
   '/accounts': { title: 'Accounts I’ve Managed', intro: 'A selection of brands and digital accounts I’ve helped manage, shape, and grow through strategy, content, and consistent digital execution.', description: 'Social media management and digital brand strategy by Evelyn Andrew.', label: 'Selected accounts' },
-  '/campaigns': { title: 'Campaigns & Strategy', intro: 'A look at the thinking behind the work—from campaign concepts and content strategy to digital execution and performance-focused marketing.', description: 'Campaign strategy and digital marketing work by Evelyn Andrew.', label: 'Campaign case studies' },
+  '/campaigns': campaignsContent,
+  '/campaigns-strategy': campaignsContent,
 }
 
 const creativeWorkSamples = {
