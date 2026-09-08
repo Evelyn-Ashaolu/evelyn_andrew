@@ -41,6 +41,77 @@ const pageContent: Record<string, { title: string; intro: string; description: s
   '/campaigns-strategy': campaignsContent,
 }
 
+const campaignCaseStudies = [
+  {
+    number: '01',
+    title: 'KAYGANICS',
+    descriptor: 'NATURAL SKINCARE BRAND',
+    objective: 'Build a consistent, engaging, and product-focused social media presence for Kayganics, a natural skincare brand targeting health-conscious Nigerian women, men, and children.',
+    strategy: [
+      { title: 'CONTENT PLANNING', text: 'Developed a weekly content calendar built around educational reels, brand storytelling, product tutorials, and testimonials.' },
+      { title: 'AUDIENCE & POSITIONING', text: 'Conducted audience research to align the brand voice with customer expectations.' },
+      { title: 'DISCOVERABILITY', text: 'Introduced hashtag and engagement strategies to improve discoverability.' },
+      { title: 'OPTIMIZATION', text: 'Used weekly insights to refine posting times and content types.' },
+      { title: 'CAMPAIGN ALIGNMENT', text: 'Coordinated content with the CEO\'s marketing and promotional campaigns.' },
+    ],
+    executionHighlights: [
+      { value: '60+', label: 'BRANDED POSTS', text: 'Created carousels, reels, and stories across the campaign.' },
+      { value: '3', label: 'PRODUCT LAUNCHES', text: 'Managed content for 3 new skincare products.' },
+      { value: 'CREATIVE', label: 'PRODUCTION', text: 'Designed branded visuals using Canva and CapCut.' },
+    ],
+    results: [
+      { value: '+1,200', label: 'NEW FOLLOWERS', text: 'in 3 months through organic growth' },
+      { value: '65%', label: 'ENGAGEMENT INCREASE', text: '' },
+      { value: '2×', label: 'HIGHER SAVES & SHARES', text: 'on product-related posts' },
+      { value: '20%', label: 'INCREASE IN PRODUCT-ORDER DMs', text: '' },
+    ],
+    tools: 'Canva · Photoshop · CapCut · Meta Business Suite · Instagram Insights · Google Sheets',
+    visual: kayganicsProfile,
+    visualAlt: 'Kayganics profile and brand visual managed by Evelyn Andrew',
+    secondaryVisual: kayOne,
+    secondaryAlt: 'Kayganics social media content example managed by Evelyn Andrew',
+  },
+  {
+    number: '02',
+    title: 'UNIVERSITY OF EXCELLENCE',
+    descriptor: 'AI WEBINAR CAMPAIGN',
+    objective: 'Increase awareness and drive registrations for an AI webinar while positioning the University of Excellence as a trusted platform for professionals, business owners, entrepreneurs, and ministry leaders seeking practical AI skills.',
+    strategy: [
+      { title: 'CAMPAIGN PLANNING', text: 'Developed a content calendar leading up to the webinar.' },
+      { title: 'EDUCATIONAL CONTENT', text: 'Created educational posts, countdown graphics, and promotional videos.' },
+      { title: 'STORYTELLING', text: 'Used storytelling and value-driven content to build interest.' },
+      { title: 'PAID DISTRIBUTION', text: 'Launched targeted Meta Ads to reach professionals, entrepreneurs, and AI enthusiasts.' },
+      { title: 'OPTIMIZATION', text: 'Optimized content based on audience engagement and campaign performance.' },
+    ],
+    executionHighlights: [
+      { value: 'CREATIVE', label: 'DESIGN', text: 'Designed webinar flyers and promotional creatives using Canva.' },
+      { value: 'COPY', label: 'WRITING', text: 'Wrote captions and promotional copy across social media platforms.' },
+      { value: 'VIDEO', label: 'CONTENT', text: 'Created short-form videos explaining the value of attending the webinar.' },
+      { value: 'PAID ADS', label: 'MANAGEMENT', text: 'Set up and monitored Meta Ads to drive registrations.' },
+      { value: 'COMMUNITY', label: 'ENGAGEMENT', text: 'Responded to enquiries and encouraged sign-ups through comments and direct messages.' },
+      { value: 'CAMPAIGN', label: 'OPTIMIZATION', text: 'Tracked campaign performance and adjusted creatives and messaging where needed.' },
+    ],
+    results: [
+      { value: 'STRONG', label: 'REGISTRATIONS', text: 'Generated a strong number of webinar registrations through organic content and Meta Ads.' },
+      { value: 'HIGH', label: 'ATTENDANCE', text: 'Achieved an impressive attendance rate on the webinar day.' },
+      { value: '+', label: 'ENGAGEMENT', text: 'Increased engagement across social media leading up to the event.' },
+      { value: 'TRUSTED', label: 'POSITIONING', text: 'Helped position the University of Excellence as a trusted AI learning platform.' },
+    ],
+    tools: 'Canva · Meta Ads Manager · Meta Business Suite · CapCut · ChatGPT · Google Forms · Instagram Insights · Facebook Insights',
+    visual: universityOfExcellenceProfile,
+    visualAlt: 'University of Excellence campaign and brand visual managed by Evelyn Andrew',
+    secondaryVisual: uoeOne,
+    secondaryAlt: 'University of Excellence webinar promotional content managed by Evelyn Andrew',
+  },
+]
+
+const clientWins = [
+  { value: '3×', label: 'ENGAGEMENT', text: 'Managed a 30-day campaign that outperformed the previous quarter\'s engagement metrics by 3×.' },
+  { value: '20K+', label: 'ORGANIC VIEWS', text: 'Created content that led to a viral reel with over 20,000 views organically.' },
+  { value: '50%', label: 'BRAND AWARENESS', text: 'Boosted brand awareness by 50% through collaboration with local micro-influencers.' },
+  { value: '40%', label: 'FASTER CONTENT TURNAROUND', text: 'Reduced content turnaround time by 40% using streamlined content planning and design workflows.' },
+]
+
 const creativeWorkSamples = {
   design: [
     { id: 'design-1', label: 'My Design 1', src: myDesignOne, alt: 'My Design 1 — social media design by Evelyn Andrew' },
@@ -237,6 +308,109 @@ function Home() { return <main><Seo title="Branding & Digital Marketing Strategi
 </main> }
 function PortfolioPage({ content }: { content: (typeof pageContent)[string] }) { return <main><Seo title={content.title} description={content.description} /><Nav innerPage /><section className="portfolio-page shell" id="top"><p className="section-kicker">The work</p><h1>{content.title}</h1><p className="portfolio-intro">{content.intro}</p><a className="text-link" href="/#work">← Back to work</a><section className="portfolio-placeholder" aria-labelledby="portfolio-label"><h2 id="portfolio-label">{content.label}</h2><div className="placeholder-grid" aria-label={`${content.label} portfolio area`}><div /><div /><div /></div><p>Portfolio work will be added here.</p></section></section><Footer /></main> }
 
+function CampaignsPage() {
+  return <main><Seo title="Campaigns & Strategy | Evelyn Andrew" description="Explore Evelyn Andrew’s digital marketing strategy, campaign strategy, social media strategy, content strategy, and campaign management work across selected case studies." /><Nav innerPage />
+    <section className="portfolio-page shell campaigns-page" id="top">
+      <p className="section-kicker">Campaigns &amp; Strategy</p>
+      <h1>STRATEGY THAT GIVES GOOD IDEAS MOMENTUM.</h1>
+      <p className="portfolio-intro campaigns-intro-text">A closer look at selected campaigns, the thinking behind them, and the work that turned strategy into execution.</p>
+      <a className="text-link" href="/#work">← Back to work</a>
+
+      <section className="campaigns-intro" aria-labelledby="campaigns-intro-title">
+        <p className="section-kicker">SELECTED CASE STUDIES</p>
+        <h2 id="campaigns-intro-title">FROM OBJECTIVE TO EXECUTION.</h2>
+        <p>A selection of campaigns where strategy, content, creative direction, and digital execution worked together to support a clear marketing objective.</p>
+      </section>
+
+      {campaignCaseStudies.map((study) => (
+        <article className="campaign-case" key={study.title}>
+          <div className="campaign-case-header">
+            <p className="campaign-number">{study.number}</p>
+            <div className="campaign-case-title-block">
+              <h2>{study.title}</h2>
+              <p>{study.descriptor}</p>
+            </div>
+          </div>
+
+          <div className="campaign-overview">
+            <div className="campaign-subsection">
+              <p className="campaign-subhead">PROJECT OBJECTIVE</p>
+              <p className="campaign-copy">{study.objective}</p>
+            </div>
+          </div>
+
+          <div className="campaign-subsection">
+            <p className="campaign-subhead">THE STRATEGY</p>
+            <ul className="campaign-list">
+              {study.strategy.map((item) => (
+                <li key={item.title}>
+                  <span>{item.title}</span>
+                  <p>{item.text}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="campaign-subsection">
+            <p className="campaign-subhead">THE EXECUTION</p>
+            <div className="campaign-execution-grid">
+              {study.executionHighlights.map((item) => (
+                <div className="campaign-execution-item" key={`${study.title}-${item.label}`}>
+                  <p className="campaign-execution-value">{item.value}</p>
+                  <p className="campaign-execution-label">{item.label}</p>
+                  <p className="campaign-execution-text">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="campaign-subsection">
+            <p className="campaign-subhead">THE RESULTS</p>
+            <div className="campaign-result-grid">
+              {study.results.map((item) => (
+                <div className="campaign-result-item" key={`${study.title}-${item.label}`}>
+                  <p className="campaign-result-value">{item.value}</p>
+                  <p className="campaign-result-label">{item.label}</p>
+                  {item.text && <p className="campaign-result-text">{item.text}</p>}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="campaign-subsection campaign-tools-wrap">
+            <p className="campaign-subhead">TOOLS USED</p>
+            <p className="campaign-tools-text">{study.tools}</p>
+          </div>
+        </article>
+      ))}
+
+      <section className="campaign-client-wins" aria-labelledby="client-wins-title">
+        <p className="section-kicker">CLIENT WINS</p>
+        <h2 id="client-wins-title">THE WORK SHOULD MOVE SOMETHING.</h2>
+        <p className="campaign-intro">Selected outcomes from campaigns, content, collaborations, and workflow improvements.</p>
+        <div className="client-win-grid">
+          {clientWins.map((win) => (
+            <div className="client-win-item" key={win.label}>
+              <p className="client-win-value">{win.value}</p>
+              <div className="client-win-copy">
+                <p className="client-win-label">{win.label}</p>
+                <p>{win.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="campaigns-end-cta" aria-labelledby="campaigns-cta-title">
+        <h2 id="campaigns-cta-title">HAVE A CAMPAIGN IN MIND?</h2>
+        <p>Let&apos;s turn the idea into something people notice, remember, and act on.</p>
+        <a className="button button-dark" href="/#contact">LET&apos;S TALK <span>↗</span></a>
+      </section>
+    </section>
+    <Footer />
+  </main>
+}
+
 function AccountsPage() {
   return <main><Seo title="Accounts I’ve Managed | Evelyn Andrew" description="Explore Evelyn Andrew’s social media management, content creation, content strategy, and digital marketing portfolio, including Priority Group Services NJ and University of Excellence." /><Nav innerPage />
     <section className="portfolio-page shell account-page" id="top">
@@ -403,6 +577,10 @@ function App() {
 
   if (pathname === '/creative-work') {
     return <CreativeWorkPage />
+  }
+
+  if (pathname === '/campaigns' || pathname === '/campaigns-strategy') {
+    return <CampaignsPage />
   }
 
   const content = pageContent[pathname]
