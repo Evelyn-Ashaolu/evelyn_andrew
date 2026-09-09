@@ -5,8 +5,6 @@ import designImage from './assets/Design Samples.jpg'
 import myDesignOne from './assets/My Designs 1.png'
 import myDesignTwo from './assets/My Designs 2.jpg'
 import campaignsImage from './assets/Campaigns & Strategy.jpg'
-import videoSampleOne from './assets/Video Sample 1.MP4?url'
-import videoSampleTwo from './assets/Video Sample 2.MP4?url'
 import cvPdf from './assets/Evelyn Andrew Social Media Portfolio (4)_.pdf'
 import priorityGroupProfile from './assets/Priority Groups Services NJ.jpeg'
 import pgnjPostOne from './assets/PGNJ post 1.jpeg'
@@ -118,8 +116,8 @@ const creativeWorkSamples = {
     { id: 'design-2', label: 'My Design 2', src: myDesignTwo, alt: 'My Design 2 — social media design by Evelyn Andrew' },
   ],
   video: [
-    { id: 'video-1', label: 'Video sample 1', src: videoSampleOne, alt: 'Video sample 1 — creative work by Evelyn Andrew' },
-    { id: 'video-2', label: 'Video sample 2', src: videoSampleTwo, alt: 'Video sample 2 — creative work by Evelyn Andrew' },
+    { id: 'video-1', label: 'Video sample 1', src: 'https://www.youtube.com/embed/0m3ms6IIwko', title: 'Evelyn Andrew portfolio video sample 1' },
+    { id: 'video-2', label: 'Video sample 2', src: 'https://www.youtube.com/embed/SDAMV3PkhV0', title: 'Evelyn Andrew portfolio video sample 2' },
   ],
 }
 
@@ -538,9 +536,15 @@ function CreativeWorkPage() {
           <div className="creative-work-grid">
             {creativeWorkSamples.video.map((sample) => (
               <figure className="creative-work-card" key={sample.id}>
-                <video className="creative-work-video" controls preload="metadata" playsInline aria-label={sample.alt}>
-                  <source src={sample.src} />
-                </video>
+                <iframe
+                  className="creative-work-video"
+                  src={sample.src}
+                  title={sample.title}
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
               </figure>
             ))}
           </div>
